@@ -1,7 +1,7 @@
 ##### Zadanie 1
 
-# Utwórz funkcję, która doda dwie liczby x i y, gdy trzecia podana liczba z będzie liczbą parzystą
-# w przypadku gdy z jest liczbą nieparzystą wykona odejmowanie. Zadanie wykonaj w 2-ch wariantach:
+## Utwórz funkcję, która doda dwie liczby x i y, gdy trzecia podana liczba z będzie liczbą parzystą
+## w przypadku gdy z jest liczbą nieparzystą wykona odejmowanie. Zadanie wykonaj w 2-ch wariantach:
 
 # a) z - zmienna lokalna funkcji
 
