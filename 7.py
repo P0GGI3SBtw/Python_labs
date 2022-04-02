@@ -1,4 +1,4 @@
-# ##Zadanie 7
+# ## Zadanie 7
 # Zaprogramuj funkcję rzut_kostka(), która symuluje rzut sześcienną
 # kością do gry, tzn. funkcja ma zwracać losową liczbę naturalną z
 # przedziału [1 . . . 6]. Korzystając z tej funkcji zaprogramuj prostą
