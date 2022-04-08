@@ -1,4 +1,5 @@
 from functions.info2 import *
+from functions.info import *
 from functions import globals as gl
 
 gl.imie = imie = 'Jan'
@@ -19,15 +20,19 @@ if zonaty == 'tak':
     lst_dzieci = []
 
     ## INFO
-    # for i in range(liczba_dzieci):
-    #     dzicko = input('Podaj imię dziecka: ')
-    #     lst_dzieci.append(dzicko)
-    #     i += 1
-
-    ## INFO 2
-
-    
+    for i in range(liczba_dzieci):
+        dzicko = input('Podaj imię dziecka: ')
+        lst_dzieci.append(dzicko)
+        i += 1
 
     family_data(imie_zony, nazwisko_zony, liczba_dzieci, lst_dzieci)
+
+    ## INFO 2
+    dziecko_1 = input('Podaj imie dziecka: ')
+    dziecko_2 = input('Podaj imie dziecka: ')
+    dziecko_3 = input('Podaj imie dziecka: ')
+
+    family_data(imie_zony, nazwisko_zony, liczba_dzieci, dziecko_piersze = dziecko_1, dziecko_drugie = dziecko_2, dziecko_trzecie = dziecko_3)
+
 else:
     pass
