@@ -9,17 +9,17 @@ def personal_data(imie, nazwisko, lat, mieszka, zonaty, karany):
     """
     Args:
         global:
-            imię (str): imie osoby określone w main.py
-            nazwisko (str): nazwisko osoby określone w main.py
+            :param imie: (str)
+            :param nazwisko: (str)
         lokal:
-            lat (int)
-            mieszka (str)
-            zonaty (str)
-            karny (str)
+            :param lat: (int)
+            :param mieszka: (str)
+            :param zonaty: (str)
+            :param karany: (str)
     Returns:
         Zdanie wypełnione zmiennymi (str, int)
     Raises:
-        Zaimplementowany wyjątek zapobiega wprowadzeniu przez użytkownika złego typy zmiennej w pliku main.py
+        Zaimplementowany wyjątek zapobiega wprowadzeniu przez użytkownika innego typy zmiennej niż oczekiwana w pliku main.py
     """
     while True:
         try:
@@ -33,10 +33,10 @@ def personal_data(imie, nazwisko, lat, mieszka, zonaty, karany):
 def family_data(imie_zony, nazwisko_zony, liczba_dzieci, *args):
     """
     Args:
-        imie_zony (str)
-        nazwisko_zony (str)
-        liczba_dzieci (int)
-        imiona dzieci (str, list)
+        :param imie_zony: (str)
+        :param nazwisko_zony: (str)
+        :param liczba_dzieci: (int)
+        :param args: (str, list), (imiona dzieci)
     Returns:
         Zdanie wypełnione zmiennymi (str, int)
     """
