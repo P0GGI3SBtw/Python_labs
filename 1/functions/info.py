@@ -1,30 +1,49 @@
+"""info.py: Mouduł zawiera funkcję do pliku main.py, pozwalające na jego obsłge"""
+
+__name__ = 'info'
+__author__ = 'Szymon Kołodziejski'
+__version__ = '1.0.0'
+
+
 def personal_data(imie, nazwisko, lat, mieszka, zonaty, karany):
     """
-    :parameter
-        globalne:
-            imię (str)
-            nazwisko (str)
-        lokalne:
+    Args:
+        global:
+            imię (str): imie osoby określone w main.py
+            nazwisko (str): nazwisko osoby określone w main.py
+        lokal:
             lat (int)
             mieszka (str)
             zonaty (str)
             karny (str)
-    :return
-        Zdanie wypełnione zmiennymi (str i int)
+    Returns:
+        Zdanie wypełnione zmiennymi (str, int)
+    Raises:
+        Zaimplementowany wyjątek zapobiega wprowadzeniu przez użytkownika złego typy zmiennej w pliku main.py
     """
-    print(f'Imie: {imie}, nazwisko: {nazwisko}, lat: {lat}, mieszka: {mieszka} '
-          f'zonaty: {zonaty}, karany: {karany}')
+    while True:
+        try:
+            print('Imie: {}, nazwisko: {}, lat: {}, mieszka: {} zonaty: {}, karany: {}'.format(imie, nazwisko, lat,
+                                                                                               mieszka, zonaty, karany))
+            break
+        except ValueError:
+            print('Podano parametr niewłaściwego typu')
 
 
-def family_data(imie_zony, nazwisko_zony, liczba_dzieci, lst_dzieci):
+def family_data(imie_zony, nazwisko_zony, liczba_dzieci, *args):
     """
-    :parameter
-        lokalne:
-            imie_zony (str)
-            nazwisko_zony (str)
-            liczba_dzieci (int)
-    :return
-        Zdanie wypełnione zmiennymi (str i int)
+    Args:
+        imie_zony (str)
+        nazwisko_zony (str)
+        liczba_dzieci (int)
+        imiona dzieci (str, list)
+    Returns:
+        Zdanie wypełnione zmiennymi (str, int)
     """
-    print(f'Imie żony: {imie_zony}, nazwisko żony: {nazwisko_zony}, '
-          f'liczba dzieci: {liczba_dzieci}, imiona dzieci: {lst_dzieci}')
+    while True:
+        try:
+            print('Imie żony: {}, nazwisko żony: {}, '
+                  'liczba dzieci: {}, imiona dzieci: {}'.format(imie_zony, nazwisko_zony, liczba_dzieci, *args))
+            break
+        except ValueError:
+            print('Podano parametr niewłaściwego typu')
