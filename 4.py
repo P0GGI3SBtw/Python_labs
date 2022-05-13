@@ -1,36 +1,34 @@
-from tkinter.messagebox import showerror
 from tkinter import *
 
-app = Tk()
-app.geometry('300x150')
-app.title('My app')
 
-
-def operators():
-    result = 0
+def divide():
     try:
         result = int(integer1.get()) / int(integer2.get())
-        label_result.config(text='Result of action is: {}'.format(result))
+        result_l.config(text='Result of action is: {}'.format(round(result, 2)))
     except ZeroDivisionError:
-        showerror('Box:', 'Nie można dzielić przez 0')
-    finally:
-        label_result.config(text='Result of action is: {}'.format(result))
+        result_l.config(text='Can not divide by 0')
+    except Exception as e:
+        result_l.config(text='Result of action is: 0')
 
 
-l1 = Label(text='Podaj pierwszą liczbę:')
-l1.grid(row=1, column=1)
-integer1 = Entry(app, fg='green')
+app = Tk()
+app.title('my app')
+app.geometry('350x200')
+
+Label(text='Entry first integer: ').grid(row=1, column=1)
+
+integer1 = Entry(app, fg='blue')
 integer1.grid(row=1, column=2)
 
-l2 = Label(text='Podaj drugą liczbę:')
-l2.grid(row=2, column=1)
-integer2 = Entry(app, fg='green')
+Label(text='Entry second integer: ').grid(row=2, column=1)
+
+integer2 = Entry(app, fg='blue')
 integer2.grid(row=2, column=2)
 
-button_ok = Button(app, text='OK', fg='green', command=operators)
-button_ok.grid(row=3, column=1)
+Button_ok = Button(text='OK', command=divide)
+Button_ok.grid(row=3, column=1)
 
-label_result = Label(app, text='Result of action is: 0')
-label_result.grid(row=4, column=1)
+result_l = Label(text='Place for result')
+result_l.grid(row=3, column=2)
 
 app.mainloop()
