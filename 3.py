@@ -1,9 +1,9 @@
-from tkinter.messagebox import showerror
+from tkinter.messagebox import showerror, showwarning
 from tkinter import *
 
 app = Tk()
-app.geometry('300x150')
 app.title('My app')
+app.geometry('300x150')
 
 
 def operators():
@@ -14,18 +14,20 @@ def operators():
         elif var.get() == 1:
             result = int(integer1.get()) / int(integer2.get())
 
-        label_result.config(text='Result of action is: {}'.format(result))
+        label_result.config(text='Result of action is: {}'.format(round(result, 2)))
     except ZeroDivisionError:
-        showerror('Error:', 'Nie można dzielić przez 0')
+        showerror('Error:', 'Can not divide by 0')
+    except ValueError:
+        showwarning('Warning:', 'Wrong input')
 
 
-l1 = Label(text='Podaj pierwszą liczbę:')
-l1.grid(row=1, column=1)
+Label(text='Entry first integer:').grid(row=1, column=1)
+
 integer1 = Entry(app, fg='green')
 integer1.grid(row=1, column=2)
 
-l2 = Label(text='Podaj drugą liczbę:')
-l2.grid(row=2, column=1)
+Label(text='Entry second integer:').grid(row=2, column=1)
+
 integer2 = Entry(app, fg='green')
 integer2.grid(row=2, column=2)
 
