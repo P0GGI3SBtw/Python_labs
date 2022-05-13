@@ -5,11 +5,12 @@ def add():
     try:
         result = int(integer1.get()) + int(integer2.get())
         result_l.config(text='Result of action is: {}'.format(result))
-
+    except ValueError:
+        result_l.config(text='Wrong input')
 
 
 app = Tk()
-app.title('my app')
+app.title('my app') 
 app.geometry('250x200')
 
 Label(text='Entry first integer: ').grid(row=1, column=1)
