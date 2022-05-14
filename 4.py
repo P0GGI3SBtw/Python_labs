@@ -8,7 +8,7 @@ def divide():
     except ZeroDivisionError:
         result_l.config(text='Can not divide by 0')
     except Exception as e:
-        result_l.config(text='Result of action is: 0')
+        result_l.config(text='Exception: {}'.format(e))
 
 
 app = Tk()
