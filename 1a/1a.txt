@@ -1,0 +1,5 @@
+Prostopadloscian:
+Pole powierzchni bocznej: 18
+Pole podstawy: 2
+Szescian:
+Pole powierzchni: 6
